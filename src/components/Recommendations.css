@@ -1,0 +1,43 @@
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.rec-card {
+  margin: 0;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.rec-card__quote {
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.rec-card__footer {
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+}
+
+.rec-card__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.rec-card__title {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.rec-card__context {
+  color: var(--text-faint);
+  font-size: 0.76rem;
+  margin-top: 8px;
+}

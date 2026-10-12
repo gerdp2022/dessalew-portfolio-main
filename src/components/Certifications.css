@@ -1,0 +1,51 @@
+.cert-group {
+  margin-bottom: 40px;
+}
+
+.cert-group:last-child {
+  margin-bottom: 0;
+}
+
+.cert-group__title {
+  color: var(--accent-2);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 18px;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.cert-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  transition: border-color 0.15s ease;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-2-dim);
+}
+
+.cert-card__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+.cert-card__issuer {
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  margin-bottom: 12px;
+}
+
+.cert-card__date {
+  color: var(--text-faint);
+  font-size: 0.76rem;
+}

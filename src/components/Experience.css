@@ -1,0 +1,96 @@
+.log {
+  border-top: 1px solid var(--border-soft);
+}
+
+.log__entry {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.log__header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  gap: 20px;
+  background: none;
+  border: none;
+  color: var(--text);
+  text-align: left;
+  padding: 22px 4px;
+  cursor: pointer;
+}
+
+.log__timestamp {
+  color: var(--accent);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.log__role {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.log__org {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.log__caret {
+  color: var(--text-faint);
+  font-size: 1.1rem;
+}
+
+.log__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 4px;
+}
+
+.log__entry.is-open .log__body {
+  max-height: 900px;
+  padding-bottom: 28px;
+}
+
+.log__location {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+  margin: 0 0 16px;
+}
+
+.log__bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 74ch;
+}
+
+.log__bullets li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.log__bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-2);
+}
+
+@media (max-width: 640px) {
+  .log__header {
+    grid-template-columns: 1fr auto;
+  }
+  .log__timestamp {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}
